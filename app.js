@@ -41,11 +41,11 @@ const Email = req.body.email;
     const postData = JSON.stringify(data);
 
     const options = {
-        url:"https://us1.api.mailchimp.com/3.0/lists/$62402dbff0",
+        url:"https://us1.api.mailchimp.com/3.0/lists/${list_id}",
         method:"POST",
         
         Headers: {
-            "Authorization":"bearer $72ed8df3ae8a9d187a0b1bf347b12cdb-us1"
+            "Authorization":"bearer  <token>"
         },
         body:postData,
     }
@@ -110,10 +110,10 @@ app.listen(process.env.PORT || 3000, function(){
 //     ]
 // };
 // const jsonData = JSON.stringify(Data);
-// const url = "https://us1.api.mailchimp.com/3.0/lists/62402dbff0";
+// const url = "https://us1.api.mailchimp.com/3.0/lists/{list_id}";
 // const options = {
 //     method:"POST",
-// Auth:"raja:72ed8df3ae8a9d187a0b1bf347b12cdb-us1",
+// Auth:"api_key",
 // }
 
 //     https.request(url, options, function(response){
